@@ -4,13 +4,13 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
-
-    --fuente-principal: 3.8rem;
+    --grisclaro: #DFE9F3;
 }
 
+/* Globales */
 html {
     font-size: 62.5%;
-    box-sizing: border-box;    
+    box-sizing: border-box;  /*Hack para BoxModel*/   
 }
 *, *:before, *:after {
 box-sizing: inherit;
@@ -18,21 +18,7 @@ box-sizing: inherit;
 body {
     font-size: 16px; /* 1rem=10px */
     font-family: "Roboto", "sans-serif";
-}
-h1{
-    font-size: 3.8rem;
-}
-h2{
-    font-size: 2.8rem;
-}
-h3{
-    font-size: 1.8rem;
-}
-h1,h2,h3{
-    text-align: center; 
-}
-.titulo span {
-    font-size: 2rem;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100% );
 }
 .contenedor {
     max-width: 120rem;
@@ -56,6 +42,28 @@ h1,h2,h3{
         width: auto;
     }
 }
+
+/*Tipografia*/
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center; 
+}
+
+
+/*Titulos*/
+.titulo span {
+    font-size: 2rem;
+}
+
+/*Navegacion Principal*/
 .nav-bg {
 background-color: var(--secundario);
 }
@@ -84,6 +92,8 @@ background-color: var(--secundario);
     background-color: var(--primario);
     color: var(--oscuro);
 }
+
+/*Hero*/
 .hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
@@ -107,6 +117,7 @@ background-color: var(--secundario);
 .contenido-hero p {
     color: var(--blanco);
 }
-.ubicacion{
+.contenido-hero .ubicacion{
     display: flex;
+    align-items: flex-end;
 }
