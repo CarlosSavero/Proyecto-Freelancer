@@ -129,3 +129,34 @@ background-color: var(--secundario);
     display: flex;
     align-items: flex-end;
 }
+
+/**servicios**/
+@media (min-width: 768px){
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/**1fr es igual a una fraccion del 100% o 33.3% en este caso**/
+    column-gap: 1rem;     /**sirve para separacion entre columnas**/
+    }
+}
+.servicio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicio h3{
+  color: var(--secundario);
+  font-weight: normal;
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos{
+  height: 15rem;
+  width: 15rem;
+  background-color: var(--primario);
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
